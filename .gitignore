@@ -1,0 +1,37 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+terraform.tfstate.d/
+*.tfplan
+.terraform.lock.hcl
+
+# SSH Keys - NEVER COMMIT THESE
+*.pem
+*.key
+*-key.pem
+*-terraform-key.pem
+
+# Environment variables with sensitive data
+*.tfvars
+!*.tfvars.example
+
+# Crash logs
+crash.log
+crash.*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+*.backup
