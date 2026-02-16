@@ -1,0 +1,56 @@
+--installed terrafrom on aws using cloudshell
+--created two spaces: testing and production
+--Using existing terraform modules from terraform registry, I prepared these files:
+//the main.tf contianing:
+# Multi-Environment Infrastructure with SSH Keys and SSM Support
+# Updated version with key pairs and proper IAM roles
+# Random suffix for unique S3 bucket names
+# Generate SSH Key Pair
+# Create AWS Key Pair
+# Save private key locally
+# Data source for RHEL AMI
+# IAM Role for EC2 SSM Access
+# Attach SSM Policy to Role
+# Create Instance Profile
+# VPC Module
+# Security Group Module
+# EC2 Instance Module with SSM and SSH
+#!/bin/bash
+# Install SSM Agent on RHEL
+ # Update system
+# Install stress tool for testing
+# S3 Bucket Module for Static Website
+# SNS Topic Module
+# CloudWatch Alarm - EC2 CPU
+# CloudWatch Alarm - EC2 Status Check
+# CloudWatch Alarm - S3 4xx Errors
+//Two files for the production and testing VPCs Environment Configuration: production.tfvars and testing.tfvars 
+environments filling in the actual variables for each:   
+#aws_region    
+#vpc_cidr      
+#public_subnets
+#instance_type 
+#alert_email   
+//Prepared the variables.tf which includes- you guessed it!, variables and their descriptions and types!:
+#iaws_region
+#ienvironment
+#ipublic_subnets
+#iinstance_type
+#ialert_email
+//Last but not least, the output.tf which contains the resultant services, their descriptions and values:
+#vpc_id
+#ec2_instance_id
+#ec2_public_ip
+#ec2_private_ip
+#ssh_key_name
+#ssh_private_key_path
+#ssh_connection_command
+#s3_bucket_name
+#s3_website_endpoint
+#sns_topic_arn
+#iam_role_name
+#iam_role_arn
+--Initiated terraform plan on the production.tfvar inside the production workspace
+--Executed terraform apply on the production.tfvar inside the production workspace
+--Initiated terraform plan on the testing.tfvar inside the testing workspace
+--Iniitiated terraform apply on the testing.tfvar inside the testing worskapce
