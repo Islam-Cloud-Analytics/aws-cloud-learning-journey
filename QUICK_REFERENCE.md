@@ -199,10 +199,10 @@ AWS Console → EC2 → Connect → EC2 Instance Connect
 
 ## Next Steps
 
-1. ✅ Follow DEPLOYMENT_GUIDE.md
-2. ✅ Destroy old infrastructure
-3. ✅ Deploy new infrastructure
-4. ✅ Test all access methods
-5. ✅ Test alarms
-6. ✅ Upload S3 content
-7. ✅ Document in your project repo
+1. ✅ Follow [the guide](https://github.com/Cyber-Nomadness/aws-cloud-learning-journey/blob/main/How%20I%20deployed%20the%20two%20vpcs%20with%20terraform.md) and [commandline cheatsheet](https://github.com/Cyber-Nomadness/aws-cloud-learning-journey/blob/main/AWS%20Cloudshell%20Terraform%20sequence.md) 
+2. ✅ Deploy the infrastructure
+3. ✅ Test all access methods
+4. ✅ Test alarms
+5. ✅ Upload S3 content
+6. ✅ Document in your project repo
+7. ✅ Feedback and advice are welcome
