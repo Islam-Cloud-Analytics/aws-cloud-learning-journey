@@ -1,5 +1,5 @@
 # Quick Reference Guide
-
+✅ For more details Follow [the guide](https://github.com/Cyber-Nomadness/aws-cloud-learning-journey/blob/main/How%20I%20deployed%20the%20two%20vpcs%20with%20terraform.md) and [commandline cheatsheet](https://github.com/Cyber-Nomadness/aws-cloud-learning-journey/blob/main/AWS%20Cloudshell%20Terraform%20sequence.md) 
 ## Key Improvements in Updated Templates
 
 ### ✅ SSH Key Pairs
@@ -198,11 +198,8 @@ AWS Console → EC2 → Connect → EC2 Instance Connect
 ---
 
 ## Next Steps
-
-1. ✅ Follow [the guide](https://github.com/Cyber-Nomadness/aws-cloud-learning-journey/blob/main/How%20I%20deployed%20the%20two%20vpcs%20with%20terraform.md) and [commandline cheatsheet](https://github.com/Cyber-Nomadness/aws-cloud-learning-journey/blob/main/AWS%20Cloudshell%20Terraform%20sequence.md) 
-2. ✅ Deploy the infrastructure
-3. ✅ Test all access methods
-4. ✅ Test alarms
-5. ✅ Upload S3 content
-6. ✅ Document in your project repo
-7. ✅ Feedback and advice are welcome
+1. ✅Test all access methods
+2. ✅Upload S3 content
+3. ✅ Test alarms
+4. ✅  Document the findings in my project repo
+5. ✅ Feedback and advice are welcome
