@@ -1,2 +1,2 @@
-##  AWS Dual Ennvironment Infrastructure
+##  AWS Dual Environment Infrastructure
 ![AWS Infrastructure Diagram](AWS%20Dual%20Environment%20Simple%20Architecture.svg)
