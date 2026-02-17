@@ -78,7 +78,7 @@ A production-ready AWS infrastructure deployment showcasing Infrastructure as Co
 
 - **[Deployment Guide](HOW_I_DEPLOYED_THE_TWO_VPCS_WITH_TERRAFORM.md)** - Step-by-step deployment process
 - **[Quick Reference](QUICK_REFERENCE.md)** - Common commands and configurations
-- **[Architecture Diagram](architecture.svg)** - Visual infrastructure overview
+- **[Commandline cheatsheet](AWS_CLOUDSHELL_TERRAFORM_SEQUENCE.md)** - sanitized commands history from CloudShell from the start
 
   ---
 
