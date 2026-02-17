@@ -1,6 +1,4 @@
-# Quick Reference Guide
-✅ For more details Follow [the guide](https://github.com/Cyber-Nomadness/aws-cloud-learning-journey/blob/main/How%20I%20deployed%20the%20two%20vpcs%20with%20terraform.md) and [commandline cheatsheet](https://github.com/Cyber-Nomadness/aws-cloud-learning-journey/blob/main/AWS%20Cloudshell%20Terraform%20sequence.md) 
-## Key Improvements in Updated Templates
+## Customization added to the templates to suit the learning needs
 
 ### ✅ SSH Key Pairs
 - **Auto-generated** per environment
@@ -45,15 +43,6 @@ terraform-infra/
 ---
 
 ## Quick Commands
-
-### **Destroy Current Infrastructure**
-```bash
-cd ~/terraform-infra
-terraform workspace select production
-terraform destroy -var-file=environments/production.tfvars
-terraform workspace select testing
-terraform destroy -var-file=environments/testing.tfvars
-```
 
 ### **Deploy New Infrastructure**
 ```bash
