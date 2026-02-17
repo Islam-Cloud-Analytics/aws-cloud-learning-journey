@@ -87,4 +87,10 @@ A production-ready AWS infrastructure deployment showcasing Infrastructure as Co
 Built as part of my cloud engineering learning journey.
 
 [My LinkedIn](https://www.linkedin.com/in/islamzayd/) | [My Business Intelligence Project](https://github.com/Islam-Cloud-Analytics/sql-data-analysis-leprosy-caribbean)
+
+
+---
+
+**⭐ Star this repo if you find it helpful!**
+
   
