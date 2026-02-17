@@ -180,19 +180,29 @@ AWS Console → EC2 → Connect → EC2 Instance Connect
 
 ## Troubleshooting Quick Fixes
 
-**Problem: SSH connection refused**
-→ Wait 2-3 minutes for instance boot
+### Problem: Permission denied (publickey)
 
-**Problem: Permission denied (publickey)**
-→ `chmod 400 *.pem`
+→ `chmod 400 *.pem`  
+→ `ls -l your-key.pem`  
+→ `ssh -i your-key.pem ec2-user@your-instance-ip`  
+→ Different AMIs use different usernames:
+  - Amazon Linux/Amazon Linux 2: `ec2-user`
+  - RHEL: `ec2-user` or `root`
+  - Ubuntu: `ubuntu`
+  - Debian: `admin` or `debian`  
+→ In case your key is in a different location use the full path:
+  - `ssh -i ~/path/to/your-key.pem ec2-user@your-instance-ip`
 
-**Problem: Session Manager shows no instances**
+### Problem: Session Manager shows no instances
+
 → Wait 5 minutes, then check SSM agent status
 
-**Problem: No SNS confirmation email**
+### Problem: No SNS confirmation email
+
 → Check spam folder, or resend from SNS console
 
-**Problem: Alarms not triggering**
+### Problem: Alarms not triggering
+
 → Stress test for 5+ minutes (2 evaluation periods needed)
 
 ---
