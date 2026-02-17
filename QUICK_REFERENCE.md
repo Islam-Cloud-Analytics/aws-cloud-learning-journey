@@ -132,33 +132,23 @@ AWS Console → EC2 → Connect → EC2 Instance Connect
 ✅ *.tfvars.example
 ✅ Documentation
 
-### **DO NOT commit to Git:**
+**DO NOT commit to Git:**
+
 ❌ *.tfvars (contains emails)
+
 ❌ *.pem (SSH private keys)
+
 ❌ terraform.tfstate* (contains sensitive data)
+
 ❌ .terraform/ (downloaded modules)
-
----
-
-## Differences from Previous Version
-
-| Feature | Old | New |
-|---------|-----|-----|
-| SSH Keys | ❌ None | ✅ Auto-generated |
-| Session Manager | ❌ Broken | ✅ Works immediately |
-| SSM Agent | ❌ Not installed | ✅ Pre-installed |
-| IAM Role | ❌ Missing | ✅ Included |
-| Alarm Testing | ❌ Can't access | ✅ Can test via SSH/SSM |
-| Stress Tool | ❌ Not available | ✅ Pre-installed |
-| TLS Provider | ❌ Not used | ✅ For key generation |
 
 ---
 
 ## Terraform Providers Used
 
-1. **AWS** (~> 5.0) - Main infrastructure
-2. **Random** (~> 3.0) - S3 bucket suffix
-3. **TLS** (~> 4.0) - SSH key generation
+1. **AWS** (~> V. 5.0) - Main infrastructure
+2. **Random** (~> V. 3.0) - S3 bucket suffix
+3. **TLS** (~> V.4.0) - SSH key generation
 4. **Local** (built-in) - Save SSH keys locally
 
 ---
