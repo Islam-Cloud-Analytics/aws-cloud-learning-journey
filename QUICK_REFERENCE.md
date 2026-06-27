@@ -1,4 +1,6 @@
-## Customization added to the templates to suit the learning needs
+# Quick Reference Guide
+
+## Key Improvements in Updated Templates
 
 ### ✅ SSH Key Pairs
 - **Auto-generated** per environment
@@ -43,6 +45,15 @@ terraform-infra/
 ---
 
 ## Quick Commands
+
+### **Destroy Current Infrastructure**
+```bash
+cd ~/terraform-infra
+terraform workspace select production
+terraform destroy -var-file=environments/production.tfvars
+terraform workspace select testing
+terraform destroy -var-file=environments/testing.tfvars
+```
 
 ### **Deploy New Infrastructure**
 ```bash
@@ -121,23 +132,33 @@ AWS Console → EC2 → Connect → EC2 Instance Connect
 ✅ *.tfvars.example
 ✅ Documentation
 
-**DO NOT commit to Git:**
-
+### **DO NOT commit to Git:**
 ❌ *.tfvars (contains emails)
-
 ❌ *.pem (SSH private keys)
-
 ❌ terraform.tfstate* (contains sensitive data)
-
 ❌ .terraform/ (downloaded modules)
+
+---
+
+## Differences from Previous Version
+
+| Feature | Old | New |
+|---------|-----|-----|
+| SSH Keys | ❌ None | ✅ Auto-generated |
+| Session Manager | ❌ Broken | ✅ Works immediately |
+| SSM Agent | ❌ Not installed | ✅ Pre-installed |
+| IAM Role | ❌ Missing | ✅ Included |
+| Alarm Testing | ❌ Can't access | ✅ Can test via SSH/SSM |
+| Stress Tool | ❌ Not available | ✅ Pre-installed |
+| TLS Provider | ❌ Not used | ✅ For key generation |
 
 ---
 
 ## Terraform Providers Used
 
-1. **AWS** (~> V. 5.0) - Main infrastructure
-2. **Random** (~> V. 3.0) - S3 bucket suffix
-3. **TLS** (~> V.4.0) - SSH key generation
+1. **AWS** (~> 5.0) - Main infrastructure
+2. **Random** (~> 3.0) - S3 bucket suffix
+3. **TLS** (~> 4.0) - SSH key generation
 4. **Local** (built-in) - Save SSH keys locally
 
 ---
@@ -159,36 +180,29 @@ AWS Console → EC2 → Connect → EC2 Instance Connect
 
 ## Troubleshooting Quick Fixes
 
-### Problem: Permission denied (publickey)
+**Problem: SSH connection refused**
+→ Wait 2-3 minutes for instance boot
 
-→ `chmod 400 *.pem`  
-→ `ls -l your-key.pem`  
-→ `ssh -i your-key.pem ec2-user@your-instance-ip`  
-→ Different AMIs use different usernames:
-  - Amazon Linux/Amazon Linux 2: `ec2-user`
-  - RHEL: `ec2-user` or `root`
-  - Ubuntu: `ubuntu`
-  - Debian: `admin` or `debian`  
-→ In case your key is in a different location use the full path:
-  - `ssh -i ~/path/to/your-key.pem ec2-user@your-instance-ip`
+**Problem: Permission denied (publickey)**
+→ `chmod 400 *.pem`
 
-### Problem: Session Manager shows no instances
-
+**Problem: Session Manager shows no instances**
 → Wait 5 minutes, then check SSM agent status
 
-### Problem: No SNS confirmation email
-
+**Problem: No SNS confirmation email**
 → Check spam folder, or resend from SNS console
 
-### Problem: Alarms not triggering
-
+**Problem: Alarms not triggering**
 → Stress test for 5+ minutes (2 evaluation periods needed)
 
 ---
 
 ## Next Steps
-1. ✅Test all access methods
-2. ✅Upload S3 content
-3. ✅ Test alarms
-4. ✅  Document the findings in my project repo
-5. ✅ Feedback and advice are welcome
+
+1. ✅ Follow DEPLOYMENT_GUIDE.md
+2. ✅ Destroy old infrastructure
+3. ✅ Deploy new infrastructure
+4. ✅ Test all access methods
+5. ✅ Test alarms
+6. ✅ Upload S3 content
+7. ✅ Document in your project repo
